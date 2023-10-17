@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <Style>
+        body{
+            background-color: rgb(49, 132, 125);
+        }
+        .button{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+        }
+    .navbar{
+                        background-color: aqua;
+                height: 200px;
+                margin:35px;
+                padding-left:45px;
+                border-radius:20px;
+            }
+            .navbar ul{
+                overflow:auto;
+                display: flex;
+            }
+            .navbar li{
+                float:left;
+                list-style:none;
+                margin:13px 20px;
+                display: flex;
+            }
+            .navbar li a:hover {
+                color:green}
+                .search {
+                    float:right;
+                    color:White;
+                    padding:12px 75px;
+                }
+                .navbar input {
+                    border:2px solid bblock;
+                    border-radius:14px;
+                    padding:3px 17px;
+                    width:89px;
+                }
+                
+    
+    
+    
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class ="navbar">
+                <ul>
+                      
+    <img style="height:154px;margin-top:-13px" alt="Aarupadai Veedu Institute of Technology | Chennai" id="dimg_9" src="data:image/png;base64,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" data-deferred="2" data-atf="1" data-frt="0">
+
+                    <li><a hre="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#"></a>Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <div class ="Search">
+                        <input type="text"name="Search"id="Search"placeholder="Search for the website">
+                    </div>
+            
+                    <div class=" container">
+                        
+                        <h1 style="background-color: rgb(226, 202, 43);color:rgb(255, 127, 168);"><i>Welcome To Our Prestigious College</i></h1>
+                        <h2>VMRF DU (CHENNAI)</h2>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        
+    </body>
+</html>
+    <hr>
+    <H1 style ="background-color:calc(Tarun);color:coral;"><i>Basic information</i></H1>
+    <hr>
+    <br>
+    <br>
+    <div>
+        <label>Email*</label>
+        <input type="text"id="Email*" name="Email*" placeholder="Enter your Email"value="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <Select name ="REVIEW" id="REVIEW-BOX">
+            <label> Choice of Branch</label>
+            <option >Choice of branch </option>
+            <optgroup label="B.tech">
+                <option value="CSE">CSE</option>
+                <option value="Civil Department">Civil DEPARTMENT</option>
+                <option value ="Mechanical Department"> Mechnical Department</option>
+                <option value="Electrical Electronics Engineering">Electrical Electronics Engineering</option>
+                <option value="Electrical Comuication  Engineering">Electrical comunication Engineering</option>
+                <option value="Bio-Tech">Bio-Tech</option>
+                <option value="B.Pharma"> B.pharma</option>
+                            </optgroup>
+                            <optgroup label="Law">
+                                <option value="LLB-HONOUR">LLB-HONOUR</option>
+                                <option value="B.A-LLB">B.A-LLB</option>
+                                <OPTION VALUE="B.com-LLB">B..COM</OPTION>
+                            </optgroup>
+                            <optgroup label="SAS(School of Art & Science)">SAS(School of Art & Science)</optgroup>
+                            <option value="B.A">    B.A</option>
+                            <option value="B.com">B.com</option>                            <option value="B.A">    B.A</option>
+
+                            <option value="B.SC">B.SC</option>                           
+                            <option value="BBA">BBA</option>                          
+                            <option value="BCA">BCA</option>                          
+                            <option value="MA">MA</option>                          
+                            <option value="M.SC">M.SC</option> 
+                            <optgroup label="SAHS(School of Allied Health Science)" >SAHS</optgroup>                            
+                            <option value="Anesthisia"> Anesthisia</option>
+                            <option value="Cardiac">Cardiac</option>                        
+                            <option value="Operation Theater">"Operation Theater</option>                        
+                            <option value="Neurology">NEUROLOGY</option>                        
+                            <option value="ORTHO">Ortho</option>                        
+                            <option value="DIGESTIVE">DIGESTIVE</option>                        
+                            <option value="EYE">EYE</option> 
+        </Select>
+        <br>
+        <br>
+        <br>
+        <div>
+            <label>Name of the Candidate(As per 10th Certificate)</label>
+            <input type="text"id="Name of the Candidate(As per 10th Certificate)" name="Name of the Candidate(As per 10th Certificate)" placeholder=" Enter Name of the Candidate(As per 10th certificate)"value="">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <label>Photo</label>
+            <input type="file"name="user photo">
+        </div>
+        <br>
+        <br> 
+        <br>
+        <div>
+            <label>Gender*</label>
+            <input type="radio" name="gender" id="gender" value="Male">Male
+            <input type="radio" name="Gender" id="Gender" value="Female">Female
+            <input type="radio" name="Gender" id="Gender"  value="Other">Other
+        </div>
+        <div> 
+            <br>
+            <br>
+            <br>
+            <label> Alternate Contact Number</label>
+            <input  type="text" id="Alternate Contact Number"name="Alternate Contact Number"placeholder="Enter a number"value="">
+        </div>
+        <br>
+        <br>
+        <br>
+    <h1 style="background-color:Brown;color:blueviolet"><i> Details of Schooling</i></h1>
+    <hr>
+    <br>
+    <h1><b>HSC/Plus 2</b></h1>
+    <div>
+        <label>Stream*</label>
+        <input type="radio" id="Academic" name="Academic"value="Academic">Academic
+        <input type="radio" id="Vocational" name="Vocational"value="vocational">Vocational
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <label>+2Register Number</label>
+        <input type="text" id="+2Register Number*" name="+2Register Number"placeholder=""        value=     "     ">
+    </div>
+    <br>
+    <br>
+        <br>
+    <div>
+        <label>Name of the School*</label>
+        <input type="text" id="Name of the School" name="Name of the School"  placehholder="  "value=""> 
+    </div>
+    <div>
+        <br>
+        <br>
+        <br>
+        <label>
+Sub-distric Location*
+        </label>
+        <input type="text"id="Name of the School" name="Name of thhe School"value="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <label>School Location*</label>
+        <input type="text"id="School Location" name="School Location"value="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <label>Board/University*</label>
+        <input type ="radio"id="State Board"name="State Board"value="State Board">State Board
+        <input type ="radio"id="CBSE"name="CBSE"value="CBSE">CBSE
+        <input type ="radio"id="ICSE"name="ICSE"value="ICSE">ICSE
+        <input type ="radio"id="Other"name="Other"value="Other">Other
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>
+        <label>Medium of Instruction</label>
+        <input type="radio" id="Tamil" name="Tamil"VALUE="Tamil">Tamil
+        <input type="radio"  id="Hindi" name="Hindi"Value="Hindi">Hindi
+        <input type="radio" id="English" name="English"value="English">English
+        <input type ="radio" id="Others"  name="Other" value="Other">Other
+
+    </div>
+    <hr>
+    <div>
+        <h1 style="background-color:cadetblue;color:chartreuse;"><I>Address of the Candidate</I></h1>
+        <hr>
+    </div>
+    <div>
+    <lebel>Door No*</lebel>
+    <input type="text" id="Door No"name="Door No"value="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label> Street No</label>
+    <input type="text" id="Street No" name="Street No" values="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <labbel>Lane No</labbel>
+    <input type="text" id="lane no" name="Lane No"value="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label>Town</label>
+    <input type="text"id="Town"name="Town"value="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label> Distric</label>
+    <input type="text" id="Distic"name="Distic" value="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label>Pin code</label>
+    <input type="text" id="pincode"name='PINCODE'VALUE="">
+    </div>
+    <br>
+    <br>
+    <div>
+        <label>State</label>
+    <INPUT TYPE="TEXT" ID="STATE" NAME="STATE"VALUE="">
+        </div>
+        <br>
+        <br>
+        <div>
+            <label>Nationality</label>
+        <input type="text"id="Nationality"Name="Nationality" value="">
+        </div>
+<hr>
+<h1 style=background-color:yellowgreen;color:bisque;"<i>Personal Information</i></h1>
+<hr>
+<div>
+    <label>Occupation of the parent<br>Gardian</label>
+<input type="text" id="Occupation of the Parent/<br>Gardian"name="Occupation of the parent"value="">
+</div>
+<br> 
+<br>
+
+<div>
+    <label>Annual income of the Parent<br>Gardian*</label>
+    <input type="text" id="Annual income of parent" name="Annual income of thhe parent"value="">
+</div>
+<br>
+<br>
+<div>
+    <label>Nationality*</label>
+    <input type="text" id="Nationality" name="Natioality" value="">
+
+</div>
+<br> 
+<br>
+<div>
+    <label>Communnity*</label>
+    <input type="text" id="Community" name="Community" value="">
+
+</div>
+<br>
+<br>
+<div> 
+    <label>Are you intersted to apply for any Scholarship?</label>
+    <input type="radio" id="Not intersted" name="Not interested" value="Not interested">Not intersted
+    </div>
+    <br>
+    <br>
+    <div>
+        <label>https://care.ac.in/arts/scholarship*</label>
+    <input type="radio" id="" name="Sports Scholarship" value="Sports Scholarship">Sports Scholarship
+</div>
+<br>
+<hr>
+<h1><i>Other Details</i></h1>
+<hr>
+<div>
+    <label>College Transport*</label>
+    <input type="radio" id="yes" name="yes"value="yes">yes
+    <input type="radio" id="No" name="No"value="NO">No
+
+
+</div>
+<br>
+<br>
+<div>
+    <label> College Hostel*</label>
+    <input type="radio" id="yes" name="yes"value="yes">yes
+    <input type="radio" id="yes" name="yes"value="yes">No
+</div>
+<br>
+<br>
+<div>
+    <label>Are You  Interested in Sports*</label>
+    <input type="radio" id="yes" name="yes"value="yes">yes
+    <input type="radio" id="yes" name="yes"value="yes">No
+</div>
+<HR>
+    <H1 style="margin-left:450px;"><b>List of Document Required for Admission</B> </H1>
+        <h1 style="margin-left: 450;"><b> (attested 3 seats of xerox copies & all original along with 6 copies of passport size photo)</b></h6>
+</div>
+><br>
+<ol>
+<li>X Std.Mark Sheet
+</li>
+<li>XI Std.Mark Sheet
+</li>
+<li>XII Std.Mark Sheet
+</li>
+<li>Transfer Certificate</li>
+<li> Community Certificate</li>
+<li>Income Certificate</li>
+<li>Aadhaar Photo Copy</li>
+<li>Navitiy Certificate/Migration Certificate</li>
+<li>University eLIGIBILITY cERTIFICATE FOR CBSE/Other State Student </li>
+</ol>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<h1><i> UNDERTAKING*</i></h1>
+<input text area="text"id="Description" name="Description" value="">
+<br>
+<br>
+<input type="checkbox"id="I accepted the Terms and Conditions"name="I accepted the Term and Conditions" value="I accepted the Term and Conditions">I accepted the Term and Conditions
+<br>
+<br>
+<br>
+<label> Applications Filled by*</label>
+<input type="radio"id="Candidate*" name="Candidate*"value="Candidate*">Candidate
+<input type="radio"id="Counsller*" name="Counsller*"value="Counsller*">Counsller
+<br>
+<br>
+<br>
+<div class="button">
+    <button type="submit" value="submit" >submit</button>
+</div>
+<div></div>
+        
+    </div>
+
+</body>
+</html>
